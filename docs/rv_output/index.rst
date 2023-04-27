@@ -7,13 +7,11 @@ Files described in this section are not associated with a more
 specific environment variable of their own.
 
 
-
-
-Subdirectories:
+Contents:
 
 .. toctree::
    :maxdepth: 1
 
-   RVRUN/healpix/SURVEY/PROGRAM/PIXGROUP/PIXNUM/
+   RVRUN/index
    rvpix
    
