@@ -6,9 +6,14 @@ rv_output
 Files described in this section are not associated with a more
 specific environment variable of their own.
 
+
+
+
 Subdirectories:
 
 .. toctree::
    :maxdepth: 1
 
-   survey/index
+   RVRUN/healpix/SURVEY/PROGRAM/PIXGROUP/PIXNUM/
+   rvpix
+   
