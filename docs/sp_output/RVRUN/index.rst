@@ -2,7 +2,7 @@
 RVRUN
 =========
 
-Results from a given RVSpecfit run
+Results from a given FERRE run
 
 Contents:
 
