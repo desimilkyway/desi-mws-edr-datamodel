@@ -14,7 +14,7 @@ for testing.
 .. toctree::
    :maxdepth: 1
 
-   RVSpecfit output: rv_output <rv_output/index>
+   RVSpecfit output : rv_output <rv_output/index>
 
 Imaging data and their catalogs are documented separately by the
 `Legacy Survey <http://legacysurvey.org/>`_.
