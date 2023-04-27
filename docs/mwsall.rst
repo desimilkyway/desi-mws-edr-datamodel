@@ -16,16 +16,16 @@ mwsall
 Contents
 ========
 
-====== ======== ======== ===================
+====== ======== ======== ===================================
 Number EXTNAME  Type     Contents
-====== ======== ======== ===================
+====== ======== ======== ===================================
 HDU0_           IMAGE    *Brief Description*
 HDU1_  RVTAB    BINTABLE *RVSpecfit results*
 HDU2_  SPTAB    BINTABLE *FERRE results*
-HDU3_  FIBERMAP BINTABLE *Brief Description*
-HDU4_  SCORES   BINTABLE *Brief Description*
-HDU5_  GAIA     BINTABLE *Brief Description*
-====== ======== ======== ===================
+HDU3_  FIBERMAP BINTABLE *Information about targets*
+HDU4_  SCORES   BINTABLE *Information about spectra quality*
+HDU5_  GAIA     BINTABLE *Gaia crossmatch*
+====== ======== ======== ===================================
 
 
 FITS Header Units
