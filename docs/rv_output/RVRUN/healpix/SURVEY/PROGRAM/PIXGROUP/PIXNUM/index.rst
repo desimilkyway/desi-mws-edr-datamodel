@@ -1,11 +1,11 @@
-=========
+=============
 rv fits files
-=========
+=============
 
 RV fits of individiual spectra in healpix pixels
 
 
-Subdirectories:
+Contents:
 
 .. toctree::
    :maxdepth: 1
