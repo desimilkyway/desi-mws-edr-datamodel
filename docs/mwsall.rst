@@ -20,8 +20,8 @@ Contents
 Number EXTNAME  Type     Contents
 ====== ======== ======== ===================
 HDU0_           IMAGE    *Brief Description*
-HDU1_  RVTAB    BINTABLE *Brief Description*
-HDU2_  SPTAB    BINTABLE *Brief Description*
+HDU1_  RVTAB    BINTABLE *RVSpecfit results*
+HDU2_  SPTAB    BINTABLE *FERRE results*
 HDU3_  FIBERMAP BINTABLE *Brief Description*
 HDU4_  SCORES   BINTABLE *Brief Description*
 HDU5_  GAIA     BINTABLE *Brief Description*
