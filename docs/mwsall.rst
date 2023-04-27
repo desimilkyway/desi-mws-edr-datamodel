@@ -2,9 +2,7 @@
 mwsall
 ======
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
+:Summary: Combined catalog of desi measurements from RVSpecfit and FERRE crossmatched with Gaia
 :Naming Convention: ``mwsall-pix-fuji.fits``, where ... *Give a human readable
     description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
     is the 8-digit exposure ID.*
