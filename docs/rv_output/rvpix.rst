@@ -2,12 +2,11 @@
 rvpix
 =====
 
-:Summary: RVSpecfit measurements from coadded measurements in different 
+:Summary: RVSpecfit measurements from coadded measurements in different
      surveys, programs.
-:Naming Convention: ``rvpix-{SURVEY}-{PROGRAM}.fits``, where survey is sv1, 
+:Naming Convention: ``rvpix-{SURVEY}-{PROGRAM}.fits``, where survey is sv1,
      sv2.. program is dark, bright, ...
-:File Type: FITS, 1 MB  *This section gives the type of the file
-    and its approximate size.*
+:File Type: FITS, 1 MB
 
 Contents
 ========
@@ -15,11 +14,11 @@ Contents
 ====== ======== ======== ====================================================
 Number EXTNAME  Type     Contents
 ====== ======== ======== ====================================================
-HDU0_           IMAGE    *Empty HDU*
-HDU1_  RVTAB    BINTABLE *RVSpecfit results*
-HDU2_  FIBERMAP BINTABLE *Information about objects inherited from targeting*
-HDU3_  SCORES   BINTABLE *Information about spectra quality*
-HDU4_  GAIA     BINTABLE *Gaia crossmatch*
+HDU0_           IMAGE    Empty HDU
+HDU1_  RVTAB    BINTABLE RVSpecfit results
+HDU2_  FIBERMAP BINTABLE Information about objects inherited from targeting
+HDU3_  SCORES   BINTABLE Information about spectra quality
+HDU4_  GAIA     BINTABLE Gaia crossmatch
 ====== ======== ======== ====================================================
 
 
