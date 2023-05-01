@@ -1,8 +1,8 @@
 ===============================
-Welcome to the DESI Data Model!
+Welcome to the DESI MWS data Model!
 ===============================
 
-The DESI Data Tree
+The DESI MWS data Tree
 ------------------
 
 DESI MWS data
@@ -12,7 +12,7 @@ DESI MWS data
 
    RVSpecfit output : rv_output <rv_output/index>
    FERRE output : sp_output <sp_output/index>
-   mwsall
+   mwsall: The combined MWS catalog for all sources with information from RVSpecfit and FERRE
 
 
 Indices and Tables

@@ -3,27 +3,21 @@ mwsall
 ======
 
 :Summary: Combined catalog of desi measurements from RVSpecfit and FERRE crossmatched with Gaia
-:Naming Convention: ``mwsall-pix-fuji.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``mwsall-pix-fuji.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
-:File Type: FITS, 1 GB  *This section gives the type of the file
-    and its approximate size.*
+:File Type: FITS, 1 GB 
 
 Contents
 ========
 
-====== ======== ======== ===================================
+====== ======== ======== ====================================================
 Number EXTNAME  Type     Contents
-====== ======== ======== ===================================
-HDU0_           IMAGE    *Brief Description*
+====== ======== ======== ====================================================
+HDU0_           IMAGE    *Empty HDU*
 HDU1_  RVTAB    BINTABLE *RVSpecfit results*
 HDU2_  SPTAB    BINTABLE *FERRE results*
-HDU3_  FIBERMAP BINTABLE *Information about targets*
+HDU3_  FIBERMAP BINTABLE *Information about objects inherited from targeting*
 HDU4_  SCORES   BINTABLE *Information about spectra quality*
 HDU5_  GAIA     BINTABLE *Gaia crossmatch*
-====== ======== ======== ===================================
+====== ======== ======== ====================================================
 
 
 FITS Header Units
@@ -32,9 +26,6 @@ FITS Header Units
 HDU0
 ----
 
-*Summarize the contents of this HDU.*
-
-This HDU has no non-standard required keywords.
 
 Empty HDU.
 
@@ -43,7 +34,9 @@ HDU1
 
 EXTNAME = RVTAB
 
-*Summarize the contents of this HDU.*
+This is table of measurements by RVSpecfit of coadded DESI spectra. 
+This table combines the measurements from different survey/program combinations
+and labels their suggested PRIMARY observation. 
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +107,10 @@ HDU2
 
 EXTNAME = SPTAB
 
-*Summarize the contents of this HDU.*
+This is table of measurements by FERRE of coadded DESI spectra. 
+This table combines the measurements from different survey/program combinations.
+This table has exactly the same length as the RVTAB and is matching row by row 
+the RVTAB.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -167,7 +163,7 @@ HDU3
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+FIBERMAP table with information on individual targets copied from original coadd file.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -278,7 +274,7 @@ HDU4
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+The table with various quality information about spectra
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -351,7 +347,7 @@ HDU5
 
 EXTNAME = GAIA
 
-*Summarize the contents of this HDU.*
+The Gaia DR3 measurements for each object in the catalog.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~

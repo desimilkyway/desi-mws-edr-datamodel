@@ -2,29 +2,27 @@
 rvpix
 =====
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
-:Naming Convention: ``rvpix-cmx-other.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``rvpix-cmx-other.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
+:Summary: RVSpecfit measurements from coadded measurements in different 
+     surveys, programs.
+:Naming Convention: ``rvpix-{SURVEY}-{PROGRAM}.fits``, where survey is sv1, 
+     sv2.. program is dark, bright, ...
 :File Type: FITS, 1 MB  *This section gives the type of the file
     and its approximate size.*
 
 Contents
 ========
 
-====== ======== ======== ===================
+====== ======== ======== ====================================================
 Number EXTNAME  Type     Contents
-====== ======== ======== ===================
-HDU0_           IMAGE    *Brief Description*
-HDU1_  RVTAB    BINTABLE *Brief Description*
-HDU2_  FIBERMAP BINTABLE *Brief Description*
-HDU3_  SCORES   BINTABLE *Brief Description*
-HDU4_  GAIA     BINTABLE *Brief Description*
-====== ======== ======== ===================
+====== ======== ======== ====================================================
+HDU0_           IMAGE    *Empty HDU*
+HDU1_  RVTAB    BINTABLE *RVSpecfit results*
+HDU2_  FIBERMAP BINTABLE *Information about objects inherited from targeting*
+HDU3_  SCORES   BINTABLE *Information about spectra quality*
+HDU4_  GAIA     BINTABLE *Gaia crossmatch*
+====== ======== ======== ====================================================
+
+
 
 
 FITS Header Units
@@ -33,10 +31,6 @@ FITS Header Units
 HDU0
 ----
 
-*Summarize the contents of this HDU.*
-
-This HDU has no non-standard required keywords.
-
 Empty HDU.
 
 HDU1
@@ -44,7 +38,8 @@ HDU1
 
 EXTNAME = RVTAB
 
-*Summarize the contents of this HDU.*
+This is table of measurements by RVSpecfit of coadded DESI spectra for 
+a given survey/program.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +107,7 @@ HDU2
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+FIBERMAP table with information on individual targets copied from original coadd file.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +205,7 @@ HDU3
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+The table with various quality information about spectra
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -283,7 +278,7 @@ HDU4
 
 EXTNAME = GAIA
 
-*Summarize the contents of this HDU.*
+The Gaia DR3 measurements for each object in the catalog.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
