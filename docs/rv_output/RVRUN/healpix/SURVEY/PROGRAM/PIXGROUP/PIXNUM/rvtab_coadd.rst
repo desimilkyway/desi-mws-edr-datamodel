@@ -12,15 +12,15 @@ rvtab_coadd
 Contents
 ========
 
-====== ======== ======== ========================================================
-Number EXTNAME  Type     Contents
+====== ============ ======== ====================================================
+Number EXTNAME      Type     Contents
 ====== ============ ======== ====================================================
 HDU0_               IMAGE    Empty HDU
 HDU1_  RVTAB        BINTABLE RVSpecfit results
 HDU2_  FIBERMAP     BINTABLE Information about objects inherited from targeting
 HDU3_  SCORES       BINTABLE Information about spectra quality*
 HDU4_  EXP_FIBERMAP BINTABLE Fibermap corresponding to different exposures
-====== ======== ======== ========================================================
+====== ============ ======== ====================================================
 
 
 FITS Header Units
@@ -62,7 +62,7 @@ HDU1
 
 EXTNAME = RVTAB
 
-*Summarize the contents of this HDU.*
+The table of RVSpecfit measurements in a given healpixel.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,7 +127,7 @@ HDU2
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+Information about objects inherited from targeting
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -230,7 +230,7 @@ HDU3
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+Information about spectra quality
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -305,7 +305,8 @@ HDU4
 
 EXTNAME = EXP_FIBERMAP
 
-*Summarize the contents of this HDU.*
+The fibermap records corresponding to individual exposures that went
+into the stack
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -360,7 +361,3 @@ PSF_TO_FIBER_SPECFLUX float64          fraction of light from point-like source 
 ===================== ======= ======== =======================================================================================================
 
 
-Notes and Examples
-==================
-
-*Add notes and examples here.  You can also create links to example files.*

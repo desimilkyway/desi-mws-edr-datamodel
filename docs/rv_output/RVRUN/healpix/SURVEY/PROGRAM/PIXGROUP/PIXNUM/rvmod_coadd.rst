@@ -2,14 +2,9 @@
 rvmod_coadd
 ===========
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
-:Naming Convention: ``rvmod_coadd-sv3-bright-10016.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``rvmod_coadd-sv3-bright-10016.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
+:Summary: This is the file containing the best fit models to spectra from rvspecfit
+:Naming Convention: ``rvmod_coadd-sv3-bright-10016.fits`` for a sv3 survey, bright
+		    program and healpixel 10016
 :File Type: FITS, 551 KB  *This section gives the type of the file
     and its approximate size.*
 
@@ -36,7 +31,7 @@ FITS Header Units
 HDU0
 ----
 
-*Summarize the contents of this HDU.*
+Empty
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,7 +69,7 @@ HDU1
 
 EXTNAME = B_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+The wavelength vector for the spectra
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -98,7 +93,9 @@ HDU2
 
 EXTNAME = B_MODEL
 
-*Summarize the contents of this HDU.*
+The best fit model in the B arm of the instrument.
+This HDU contains as many rows as many there are rows in
+the rvtab table. They also match one-to-one in terms of order.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,7 +120,7 @@ HDU3
 
 EXTNAME = R_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+The wavelength vector for the R arm of the instrument
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -147,7 +144,9 @@ HDU4
 
 EXTNAME = R_MODEL
 
-*Summarize the contents of this HDU.*
+The best fit model in the R arm of the instrument.
+This HDU contains as many rows as many there are rows in
+the rvtab table. They also match one-to-one in terms of order.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,7 +171,7 @@ HDU5
 
 EXTNAME = Z_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+The wavelength vector of the Z arm of the instrument
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,7 +195,9 @@ HDU6
 
 EXTNAME = Z_MODEL
 
-*Summarize the contents of this HDU.*
+The best fit model in the Z arm of the instrument.
+This HDU contains as many rows as many there are rows in
+the rvtab table. They also match one-to-one in terms of order.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -221,7 +222,8 @@ HDU7
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+The FIBERMAP targeting table for the objects. The same and in the same order as
+in RVTAB
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -319,8 +321,3 @@ STD_FIBER_DEC              float32 arcsec       Standard deviation (over exposur
 MEAN_PSF_TO_FIBER_SPECFLUX float32              Mean of input exposures fraction of light from point-like source captured by 1.5 arcsec diameter fiber given atmospheric seeing
 ========================== ======= ============ ===============================================================================================================================
 
-
-Notes and Examples
-==================
-
-*Add notes and examples here.  You can also create links to example files.*
