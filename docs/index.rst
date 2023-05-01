@@ -1,9 +1,15 @@
-===============================
+===================================
 Welcome to the DESI MWS data Model!
-===============================
+===================================
 
 The DESI MWS data Tree
-------------------
+----------------------
+
+This hosts the key products from the RVSpecfit and FERRE pipelines.
+The outputs are groups two pipelines are given separately with the
+exceptoin of mwsall table that combined the outputs from the two
+pipelines in one file, as well as identifies duplicates observed
+in different surveys and programs.
 
 DESI MWS data
 
@@ -12,7 +18,7 @@ DESI MWS data
 
    RVSpecfit output : rv_output <rv_output/index>
    FERRE output : sp_output <sp_output/index>
-   mwsall: The combined MWS catalog for all sources with information from RVSpecfit and FERRE
+   mwsall
 
 
 Indices and Tables
