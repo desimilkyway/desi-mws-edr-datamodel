@@ -2,27 +2,25 @@
 rvtab_coadd
 ===========
 
-:Summary: RVspecfit measurements of coadded spectra in a given healpixel
-:Naming Convention: ``rvtab_coadd-sv3-bright-10016.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``rvtab_coadd-sv3-bright-10016.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
+:Summary: RVspecfit measurements of coadded spectra in a given healpix.
+:Naming Convention: ``rvtab_coadd-sv3-bright-10016.fits``, where
+		    this would be the file from sv3 survey
+		    in bright program in 10016 healpixel
 :File Type: FITS, 61 KB  *This section gives the type of the file
     and its approximate size.*
 
 Contents
 ========
 
-====== ============ ======== ===================
-Number EXTNAME      Type     Contents
-====== ============ ======== ===================
-HDU0_               IMAGE    *Brief Description*
-HDU1_  RVTAB        BINTABLE *Brief Description*
-HDU2_  FIBERMAP     BINTABLE *Brief Description*
-HDU3_  SCORES       BINTABLE *Brief Description*
-HDU4_  EXP_FIBERMAP BINTABLE *Brief Description*
-====== ============ ======== ===================
+====== ======== ======== ========================================================
+Number EXTNAME  Type     Contents
+====== ============ ======== ====================================================
+HDU0_               IMAGE    Empty HDU
+HDU1_  RVTAB        BINTABLE RVSpecfit results
+HDU2_  FIBERMAP     BINTABLE Information about objects inherited from targeting
+HDU3_  SCORES       BINTABLE Information about spectra quality*
+HDU4_  EXP_FIBERMAP BINTABLE Fibermap corresponding to different exposures
+====== ======== ======== ========================================================
 
 
 FITS Header Units
