@@ -2,7 +2,7 @@
 SURVEY
 =========
 
-grouping by survey
+Fit results from a given survey
 
 Contents:
 

@@ -2,8 +2,7 @@
 rv fits files
 =============
 
-RV fits of individiual spectra in healpix pixels
-
+Fit results of coadded spectrin within a given healpixel
 
 Contents:
 

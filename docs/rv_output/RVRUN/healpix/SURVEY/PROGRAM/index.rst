@@ -2,7 +2,7 @@
 PROGRAM
 =========
 
-grouping by program
+Fit results grouped by PROGRAM.
 
 Contents:
 

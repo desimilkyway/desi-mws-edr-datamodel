@@ -2,7 +2,7 @@
 healpix
 =========
 
-grouping by healpix
+Fit results from spectra grouped by healpix.
 
 Contents:
 

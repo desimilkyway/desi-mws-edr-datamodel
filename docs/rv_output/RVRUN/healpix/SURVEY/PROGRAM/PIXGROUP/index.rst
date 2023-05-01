@@ -1,8 +1,8 @@
-=========
+========
 PIXGROUP
-=========
+========
 
-grouping by parts of healpixel
+Fit results from a given healpixel group (HEALPIX//100)
 
 Contents:
 
