@@ -19,11 +19,11 @@ Contents
 ====== ======== ======== ===================
 Number EXTNAME  Type     Contents
 ====== ======== ======== ===================
-HDU0_           IMAGE    *Brief Description*
-HDU1_  SPTAB    BINTABLE *Brief Description*
-HDU2_  FIBERMAP BINTABLE *Brief Description*
-HDU3_  SCORES   BINTABLE *Brief Description*
-HDU4_  GAIA     BINTABLE *Brief Description*
+HDU0_           IMAGE    Empty HDU
+HDU1_  SPTAB    BINTABLE FERRE results
+HDU2_  FIBERMAP BINTABLE Information about objects inherited from targeting
+HDU3_  SCORES   BINTABLE Information about spectra quality
+HDU4_  GAIA     BINTABLE Gaia crossmatch
 ====== ======== ======== ===================
 
 
@@ -33,10 +33,6 @@ FITS Header Units
 HDU0
 ----
 
-*Summarize the contents of this HDU.*
-
-This HDU has no non-standard required keywords.
-
 Empty HDU.
 
 HDU1
@@ -44,7 +40,7 @@ HDU1
 
 EXTNAME = SPTAB
 
-*Summarize the contents of this HDU.*
+This is the table of measurements by FERRE of coadded DESI spectra for given survey/program.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
