@@ -19,11 +19,11 @@ Contents
 ====== ======== ======== ===================
 Number EXTNAME  Type     Contents
 ====== ======== ======== ===================
-HDU0_           IMAGE    *Brief Description*
-HDU1_  SPTAB    BINTABLE *Brief Description*
-HDU2_  FIBERMAP BINTABLE *Brief Description*
-HDU3_  SCORES   BINTABLE *Brief Description*
-HDU4_  AUX      BINTABLE *Brief Description*
+HDU0_           IMAGE    Empty HDU
+HDU1_  SPTAB    BINTABLE FERRE results
+HDU2_  FIBERMAP BINTABLE Information about objects inherited from targeting
+HDU3_  SCORES   BINTABLE Information about spectra quality
+HDU4_  AUX      BINTABLE Gaia crossmatch
 ====== ======== ======== ===================
 
 
@@ -45,27 +45,26 @@ Required Header Keywords
     ======== ========================== ===== =======
     KEY      Example Value              Type  Comment
     ======== ========================== ===== =======
-    DATE     2022-04-03T16:48:32        str
-    FCONFIG  desi-ms.yaml               str
-    HOST     login1                     str
-    OS       posix                      str
-    PLATFORM Linux 4.4.90-92.45-default str
-    NSPEC    7                          int
-    FTIME    234.041                    float
-    STIME    900.0                      float
-    NCORES   16                         int
-    NTHREADS 12                         int
-    NUMPY    1.17.2                     str
-    ASTROPY  3.2.2                      str
-    MATPLOTL 3.1.1                      str
-    SCIPY    1.3.1                      str
-    YAML     5.1.2                      str
-    PYTHON   3.7.4                      str
-    PIFERRE  0.4                        str
-    FERRE    5.0.0                      str
+    DATE     2022-04-03T16:48:32        str   Date of processing
+    FCONFIG  desi-ms.yaml               str   FERRE config information
+    HOST     login1                     str   machine used
+    OS       posix                      str   Operative system
+    PLATFORM Linux 4.4.90-92.45-default str   OS details
+    NSPEC    7                          int   Number of spectra included
+    FTIME    234.041                    float Compute time used by FERRE
+    STIME    900.0                      float Compute time estimated for Slurm
+    NCORES   16                         int   Number of cores in node
+    NTHREADS 12                         int   Number of cores used by large FERRE instances
+    NUMPY    1.17.2                     str   NumPy version
+    ASTROPY  3.2.2                      str   AstroPy version
+    MATPLOTL 3.1.1                      str   Matplotlib version
+    SCIPY    1.3.1                      str   SciPy version
+    YAML     5.1.2                      str   Yaml version
+    PYTHON   3.7.4                      str   Python version
+    PIFERRE  0.4                        str   Piferre version
+    FERRE    5.0.0                      str   FERRE version
     ======== ========================== ===== =======
 
-Empty HDU.
 
 HDU1
 ----
@@ -96,27 +95,27 @@ Required Data Table Columns
 ========== =========== ====== ===================================================================================================
 Name       Type        Units  Description
 ========== =========== ====== ===================================================================================================
-SUCCESS    int64
+SUCCESS    int64              Bit indicating whether the code has likely produced useful results
 TARGETID   int64              Unique DESI target ID
 TARGET_RA  float64     deg    Target right ascension
 TARGET_DEC float64     deg    Target declination
 REF_ID     int64              Tyc1*1,000,000+Tyc2*10+Tyc3 for Tycho-2; sourceid for Gaia DR2
 REF_CAT    char[2]            Reference catalog source for star: T2 for Tycho-2, G2 for Gaia DR2, L2 for the SGA, empty otherwise
-SRCFILE    char[22]
-BESTGRID   char[8]
-TEFF       float64     K
-LOGG       float64
-FEH        float64
-ALPHAFE    float64
-LOG10MICRO float64
-PARAM      float64[5]
-COVAR      float64[25]
-ELEM       float64[4]
-ELEM_ERR   float64[4]
-CHISQ_TOT  float64
-SNR_MED    float64
-RV_ADOP    float64     km s-1
-RV_ERR     float64     km s-1
+SRCFILE    char[20]           DESI data file
+BESTGRID   char[8]            Model grid that produced the best fit
+TEFF       float64     K      Effective temperature (K)
+LOGG       float64            Surface gravity (g in cm/s**2)
+FEH        float64            Metallicity [Fe/H] = log10(N(Fe)/N(H)) - log10(N(Fe)/N(H))sun
+ALPHAFE    float64            Alpha-to-iron ratio [alpha/Fe]
+LOG10MICRO float64            Log10 of Microturbulence (km/s)
+PARAM      float64[5]         Array of atmospheric parameters ([Fe/H], [a/Fe], log10micro, Teff,logg)
+COVAR      float64[25]        Covariance matrix for ([Fe/H], [a/Fe], log10micro, Teff,logg)
+ELEM       float64[4]         Elemental abundance ratios to hydrogen [elem/H]
+ELEM_ERR   float64[4]         Uncertainties in the elemental abundance ratios
+CHISQ_TOT  float64            Total chi**2
+SNR_MED    float64            Median signal-to-ratio
+RV_ADOP    float64     km s-1 Adopted Radial Velocity (km/s)
+RV_ERR     float64     km s-1 Uncertainty in the adopted Radial Velocity (km/s)
 ========== =========== ====== ===================================================================================================
 
 HDU2
