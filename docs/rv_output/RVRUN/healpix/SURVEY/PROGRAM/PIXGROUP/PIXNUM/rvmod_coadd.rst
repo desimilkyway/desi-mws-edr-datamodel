@@ -14,14 +14,14 @@ Contents
 ====== ============ ======== ===================
 Number EXTNAME      Type     Contents
 ====== ============ ======== ===================
-HDU0_               IMAGE    *Brief Description*
-HDU1_  B_WAVELENGTH IMAGE    *Brief Description*
-HDU2_  B_MODEL      IMAGE    *Brief Description*
-HDU3_  R_WAVELENGTH IMAGE    *Brief Description*
-HDU4_  R_MODEL      IMAGE    *Brief Description*
-HDU5_  Z_WAVELENGTH IMAGE    *Brief Description*
-HDU6_  Z_MODEL      IMAGE    *Brief Description*
-HDU7_  FIBERMAP     BINTABLE *Brief Description*
+HDU0_               IMAGE    Empty HDU
+HDU1_  B_WAVELENGTH IMAGE    Wavelength array of b-channel spectra
+HDU2_  B_MODEL      IMAGE    Flux array of best-fit model b-channel spectra 
+HDU3_  R_WAVELENGTH IMAGE    Wavelength array of r-channel spectra
+HDU4_  R_MODEL      IMAGE    Flux array of best-fit model r-channel spectra
+HDU5_  Z_WAVELENGTH IMAGE    Wavelength array of z-channel spectra
+HDU6_  Z_MODEL      IMAGE    Flux array of best-fit model z-channel spectra
+HDU7_  FIBERMAP     BINTABLE Information about objects inherited from targeting
 ====== ============ ======== ===================
 
 
