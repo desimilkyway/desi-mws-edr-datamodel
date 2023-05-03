@@ -23,7 +23,7 @@ HDU0_           IMAGE    Empty HDU
 HDU1_  SPTAB    BINTABLE FERRE results
 HDU2_  FIBERMAP BINTABLE Information about objects inherited from targeting
 HDU3_  SCORES   BINTABLE Information about spectra quality
-HDU4_  AUX      BINTABLE Gaia crossmatch
+HDU4_  AUX      BINTABLE Auxiliary information: names of the parameters and chemical elements in the order used in building the PARAM and ELEM arrays in SPTAB
 ====== ======== ======== ===================
 
 

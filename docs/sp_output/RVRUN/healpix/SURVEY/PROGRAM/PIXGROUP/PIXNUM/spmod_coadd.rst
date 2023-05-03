@@ -19,16 +19,16 @@ Contents
 ====== ============ ======== ===================
 Number EXTNAME      Type     Contents
 ====== ============ ======== ===================
-HDU00_              IMAGE    *Brief Description*
-HDU01_ B_WAVELENGTH IMAGE    *Brief Description*
-HDU02_ B_MODEL      BINTABLE *Brief Description*
-HDU03_ R_WAVELENGTH IMAGE    *Brief Description*
-HDU04_ R_MODEL      BINTABLE *Brief Description*
-HDU05_ Z_WAVELENGTH IMAGE    *Brief Description*
-HDU06_ Z_MODEL      BINTABLE *Brief Description*
-HDU07_ FIBERMAP     BINTABLE *Brief Description*
-HDU08_ SCORES       BINTABLE *Brief Description*
-HDU09_ FILTER       BINTABLE *Brief Description*
+HDU00_              IMAGE    Empty HDU
+HDU01_ B_WAVELENGTH IMAGE    Wavelength array of b-channel spectra
+HDU02_ B_MODEL      BINTABLE Flux array of best-fit model b-channel spectra
+HDU03_ R_WAVELENGTH IMAGE    Wavelength array of r-channel spectra
+HDU04_ R_MODEL      BINTABLE Flux array of best-fit model r-channel spectra
+HDU05_ Z_WAVELENGTH IMAGE    Wavelength array of z-channel spectra
+HDU06_ Z_MODEL      BINTABLE Flux array of best-fit model z-channel spectra
+HDU07_ FIBERMAP     BINTABLE Information about objects inherited from targeting
+HDU08_ SCORES       BINTABLE Information about spectra quality
+HDU09_ FILTER       BINTABLE Spectral filters used for the determination of chemical abundances
 ====== ============ ======== ===================
 
 
@@ -50,24 +50,25 @@ Required Header Keywords
     ======== ========================== ===== =======
     KEY      Example Value              Type  Comment
     ======== ========================== ===== =======
-    DATE     2022-04-03T16:48:33        str
-    FCONFIG  desi-ms.yaml               str
-    HOST     login1                     str
-    OS       posix                      str
-    PLATFORM Linux 4.4.90-92.45-default str
-    NSPEC    7                          int
-    FTIME    234.041                    float
-    STIME    900.0                      float
-    NCORES   16                         int
-    NTHREADS 12                         int
-    NUMPY    1.17.2                     str
-    ASTROPY  3.2.2                      str
-    MATPLOTL 3.1.1                      str
-    SCIPY    1.3.1                      str
-    YAML     5.1.2                      str
-    PYTHON   3.7.4                      str
-    PIFERRE  0.4                        str
-    FERRE    5.0.0                      str
+    DATE     2022-04-03T16:48:32        str   Date of processing
+    FCONFIG  desi-ms.yaml               str   FERRE config information
+    HOST     login1                     str   machine used
+    OS       posix                      str   Operative system
+    PLATFORM Linux 4.4.90-92.45-default str   OS details
+    NSPEC    7                          int   Number of spectra included
+    FTIME    234.041                    float Compute time used by FERRE
+    STIME    900.0                      float Compute time estimated for Slurm
+    NCORES   16                         int   Number of cores in node
+    NTHREADS 12                         int   Number of cores used by large FERR
+E instances
+    NUMPY    1.17.2                     str   NumPy version
+    ASTROPY  3.2.2                      str   AstroPy version
+    MATPLOTL 3.1.1                      str   Matplotlib version
+    SCIPY    1.3.1                      str   SciPy version
+    YAML     5.1.2                      str   Yaml version
+    PYTHON   3.7.4                      str   Python version
+    PIFERRE  0.4                        str   Piferre version
+    FERRE    5.0.0                      str   FERRE version
     ======== ========================== ===== =======
 
 Empty HDU.
@@ -123,11 +124,11 @@ Required Data Table Columns
 ==== ============= ===== ===========
 Name Type          Units Description
 ==== ============= ===== ===========
-obs  float64[4759]
-err  float64[4759]
-flx  float64[4759]
-fit  float64[4759]
-abu  float64[4759]
+obs  float64[4759] cgs   Normalized b-channel observed flux as fit by FERRE 
+err  float64[4759] cgs   Normalized b-channel observed flux uncertainties
+flx  float64[4759] cgs   Best-fit b-channel model flux in absolute units (f_lambda in cgs units)
+fit  float64[4759] cgs   Best-fit b-channel normalized model flux 
+abu  float64[4759] cgs   Best-fit b-channel normalized model flux from the chemical abundance determinations
 ==== ============= ===== ===========
 
 HDU03
@@ -181,11 +182,11 @@ Required Data Table Columns
 ==== ============= ===== ===========
 Name Type          Units Description
 ==== ============= ===== ===========
-obs  float64[4231]
-err  float64[4231]
-flx  float64[4231]
-fit  float64[4231]
-abu  float64[4231]
+obs  float64[4231] cgs   Normalized r-channel observed flux as fit by FERRE
+err  float64[4231] cgs   Normalized r-channel observed flux uncertainties
+flx  float64[4231] cgs   Best-fit r-channel model flux in absolute units (f_lambda in cgs units)
+fit  float64[4231] cgs   Best-fit r-channel normalized model flux
+abu  float64[4231] cgs   Best-fit r-channel normalized model flux from the chemical abundance determinations
 ==== ============= ===== ===========
 
 HDU05
@@ -239,11 +240,11 @@ Required Data Table Columns
 ==== ============= ===== ===========
 Name Type          Units Description
 ==== ============= ===== ===========
-obs  float64[4797]
-err  float64[4797]
-flx  float64[4797]
-fit  float64[4797]
-abu  float64[4797]
+obs  float64[4797] cgs   Normalized z-channel observed flux as fit by FERRE
+err  float64[4797] cgs   Normalized z-channel observed flux uncertainties
+flx  float64[4797] cgs   Best-fit z-channel model flux in absolute units (f_lambda in cgs units)
+fit  float64[4797] cgs   Best-fit z-channel normalized model flux
+abu  float64[4797] cgs   Best-fit z-channel normalized model flux from the chemical abundance determinations
 ==== ============= ===== ===========
 
 HDU07
@@ -449,10 +450,10 @@ Required Data Table Columns
 ==== ======= ===== ===========
 Name Type    Units Description
 ==== ======= ===== ===========
-Fe   float64
-Ca   float64
-C    float64
-Mg   float64
+Fe   float64 dex   Iron abundance  
+Ca   float64 dex   Calcium abundance
+C    float64 dex   Carbon abundance
+Mg   float64 dex   Magnesium abundance
 ==== ======= ===== ===========
 
 
