@@ -47,9 +47,9 @@ Required Header Keywords
 
     .. rst-class:: keywords
 
-    ======== ========================== ===== =======
+    ======== ========================== ===== =================================
     KEY      Example Value              Type  Comment
-    ======== ========================== ===== =======
+    ======== ========================== ===== =================================
     DATE     2022-04-03T16:48:32        str   Date of processing
     FCONFIG  desi-ms.yaml               str   FERRE config information
     HOST     login1                     str   machine used
@@ -59,8 +59,7 @@ Required Header Keywords
     FTIME    234.041                    float Compute time used by FERRE
     STIME    900.0                      float Compute time estimated for Slurm
     NCORES   16                         int   Number of cores in node
-    NTHREADS 12                         int   Number of cores used by large FERR
-E instances
+    NTHREADS 12                         int   Maximum number of cores for FERRE 
     NUMPY    1.17.2                     str   NumPy version
     ASTROPY  3.2.2                      str   AstroPy version
     MATPLOTL 3.1.1                      str   Matplotlib version
@@ -69,8 +68,7 @@ E instances
     PYTHON   3.7.4                      str   Python version
     PIFERRE  0.4                        str   Piferre version
     FERRE    5.0.0                      str   FERRE version
-    ======== ========================== ===== =======
-
+    ======== ========================== ===== =================================
 
 Empty HDU.
 
