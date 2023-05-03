@@ -21,11 +21,11 @@ Number EXTNAME      Type     Contents
 ====== ============ ======== ===================
 HDU00_              IMAGE    Empty HDU
 HDU01_ B_WAVELENGTH IMAGE    Wavelength array of b-channel spectra
-HDU02_ B_MODEL      BINTABLE Flux array of best-fit model b-channel spectra
+HDU02_ B_MODEL      BINTABLE Flux array of best-fit model b-channel spectra and auxiliary quantities 
 HDU03_ R_WAVELENGTH IMAGE    Wavelength array of r-channel spectra
-HDU04_ R_MODEL      BINTABLE Flux array of best-fit model r-channel spectra
+HDU04_ R_MODEL      BINTABLE Flux array of best-fit model r-channel spectra and auxiliary quantities                                                        
 HDU05_ Z_WAVELENGTH IMAGE    Wavelength array of z-channel spectra
-HDU06_ Z_MODEL      BINTABLE Flux array of best-fit model z-channel spectra
+HDU06_ Z_MODEL      BINTABLE Flux array of best-fit model z-channel spectra and auxiliary quantities                                                        
 HDU07_ FIBERMAP     BINTABLE Information about objects inherited from targeting
 HDU08_ SCORES       BINTABLE Information about spectra quality
 HDU09_ FILTER       BINTABLE Spectral filters used for the determination of chemical abundances
