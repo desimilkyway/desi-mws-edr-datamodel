@@ -2,16 +2,11 @@
 sppix
 =====
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
-:Naming Convention: ``sppix-cmx-other.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``sppix-cmx-other.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
-:File Type: FITS, 1 MB  *This section gives the type of the file
-    and its approximate size.*
+:Summary: FERRE results from coadded spectra for different surveys, programs.
+:Naming Convention: ``sppix-{SURVEY}-{PROGRAM}.fits``, where SURVEY is main, 
+   special, sv1, sv2, sv3, and PROGRAM is dark, bright, backup, other.
+:Regex: ``sppix-.*-.*fits``
+:File Type: FITS, 100 MB  
 
 Contents
 ========
@@ -93,7 +88,7 @@ HDU2
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+FIBERMAP table with information on individual targets copied from original coadd file.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -191,7 +186,7 @@ HDU3
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+The table with various quality information about spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -264,7 +259,7 @@ HDU4
 
 EXTNAME = GAIA
 
-*Summarize the contents of this HDU.*
+The Gaia DR3 measurements for each object in the catalog.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -447,4 +442,5 @@ EBV                             float32  mag       Galactic extinction E(B-V) re
 Notes and Examples
 ==================
 
-*Add notes and examples here.  You can also create links to example files.*
+Example
+https://data.desi.lbl.gov/desi/science/mws/redux/edr/v1/sp_output/sppix-sv3-bright.fits 

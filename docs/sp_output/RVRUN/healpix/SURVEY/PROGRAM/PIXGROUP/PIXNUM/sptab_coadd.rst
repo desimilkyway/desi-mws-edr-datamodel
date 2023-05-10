@@ -2,16 +2,12 @@
 sptab_coadd
 ===========
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
-:Naming Convention: ``sptab_coadd-sv3-bright-10016.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``sptab_coadd-sv3-bright-10016.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
-:File Type: FITS, 50 KB  *This section gives the type of the file
-    and its approximate size.*
+:Summary: FERRE results from coadded spectra for a given HEALPIX.
+:Naming Convention: ``sptab_coadd-{SURVEY}-{PROGRAM}-{HEALPIX}.fits``, where 
+    SURVEY is main, special, sv1, sv2, sv3, and PROGRAM is dark, bright, 
+    backup, other.
+:Regex: ``sptab_coadd-.*-.*-.*.fits`` 
+:File Type: FITS, 100 KB  
 
 Contents
 ========
@@ -33,7 +29,7 @@ FITS Header Units
 HDU0
 ----
 
-*Summarize the contents of this HDU.*
+Empty HDU.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -71,7 +67,7 @@ HDU1
 
 EXTNAME = SPTAB
 
-*Summarize the contents of this HDU.*
+This is the table of measurements by FERRE of coadded DESI spectra for a given HEALPIX.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,7 +119,7 @@ HDU2
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+FIBERMAP table with information on individual targets copied from original coadd file.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -224,7 +220,7 @@ HDU3
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+The table with various quality information about spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -297,7 +293,7 @@ HDU4
 
 EXTNAME = AUX
 
-*Summarize the contents of this HDU.*
+Additional information on the order of the parameters and elements in the arrays PARAM and ELEM, respectively.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -329,4 +325,5 @@ e    char[32]
 Notes and Examples
 ==================
 
-*Add notes and examples here.  You can also create links to example files.*
+Example:
+https://data.desi.lbl.gov/desi/science/mws/redux/edr/v1/sp_output/220309/healpix/sv3/dark/105/10517/sptab_coadd-sv3-dark-10517.fits 
