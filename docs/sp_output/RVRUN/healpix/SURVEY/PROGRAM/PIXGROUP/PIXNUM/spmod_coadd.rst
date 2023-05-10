@@ -2,16 +2,12 @@
 spmod_coadd
 ===========
 
-:Summary: *This section should be filled in with a high-level description of
-    this file. In general, you should remove or replace the emphasized text
-    (\*this text is emphasized\*) in this document.*
-:Naming Convention: ``spmod_coadd-sv3-bright-10016.fits``, where ... *Give a human readable
-    description of the filename, e.g. ``blat-{EXPID}`` where ``{EXPID}``
-    is the 8-digit exposure ID.*
-:Regex: ``spmod_coadd-sv3-bright-10016.fits`` *Give a regular expression for this filename.
-    For example, a six-digit number would correspond to ``[0-9]{6}``.*
-:File Type: FITS, 4 MB  *This section gives the type of the file
-    and its approximate size.*
+:Summary: This is the file containing the best-fit models to spectra from FERRE for a given healpix.
+:Naming Convention: ``spmod_coadd-{SURVEY}-{PROGRAM}-{HEALPIX}.fits``, where
+    SURVEY is main, special, sv1, sv2, sv3, and PROGRAM is dark, bright, 
+    backup, other.
+:Regex: ``spmod_coadd-.*-.*-.*.fits`` 
+:File Type: FITS, 50 MB  
 
 Contents
 ========
@@ -38,7 +34,7 @@ FITS Header Units
 HDU00
 -----
 
-*Summarize the contents of this HDU.*
+Empty HDU.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,14 +66,13 @@ Required Header Keywords
     FERRE    5.0.0                      str   FERRE version
     ======== ========================== ===== =================================
 
-Empty HDU.
 
 HDU01
 -----
 
 EXTNAME = B_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+Wavelength array for the b-channel spectra. 
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -99,7 +94,7 @@ HDU02
 
 EXTNAME = B_MODEL
 
-*Summarize the contents of this HDU.*
+Best-fit b-channel model fluxes and associated quantities.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,7 +130,7 @@ HDU03
 
 EXTNAME = R_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+Wavelength array for the r-channel spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,7 +152,7 @@ HDU04
 
 EXTNAME = R_MODEL
 
-*Summarize the contents of this HDU.*
+Best-fit r-channel model fluxes and associated quantities.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -193,7 +188,7 @@ HDU05
 
 EXTNAME = Z_WAVELENGTH
 
-*Summarize the contents of this HDU.*
+Wavelength array for the z-channel spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,7 +210,7 @@ HDU06
 
 EXTNAME = Z_MODEL
 
-*Summarize the contents of this HDU.*
+Best-fit z-channel model fluxes and associated quantities.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -251,7 +246,8 @@ HDU07
 
 EXTNAME = FIBERMAP
 
-*Summarize the contents of this HDU.*
+The FIBERMAP targeting table for the objects. The same and in the same order 
+  as in SPTAB.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -352,7 +348,7 @@ HDU08
 
 EXTNAME = SCORES
 
-*Summarize the contents of this HDU.*
+The table with various quality information about spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -449,14 +445,14 @@ Required Data Table Columns
 ==== ======= ===== ===========
 Name Type    Units Description
 ==== ======= ===== ===========
-Fe   float64 dex   Iron abundance  
-Ca   float64 dex   Calcium abundance
-C    float64 dex   Carbon abundance
-Mg   float64 dex   Magnesium abundance
+Fe   float64       FERRE array of weights used to derive the iron abundance  
+Ca   float64       FERRE array of weights used to derive the calcium abundance
+C    float64       FERRE array of weights used to derive the carbon abundance
+Mg   float64       FERRE array of weights used to derive the magnesium abundance
 ==== ======= ===== ===========
 
 
 Notes and Examples
 ==================
-
-*Add notes and examples here.  You can also create links to example files.*
+ 
+https://data.desi.lbl.gov/desi/science/mws/redux/edr/v1/sp_output/220309/healpix/sv3/dark/105/10517/spmod_coadd-sv3-dark-10517.fits

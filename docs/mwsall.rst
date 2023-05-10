@@ -108,7 +108,7 @@ HDU2
 EXTNAME = SPTAB
 
 This is table of measurements by FERRE of coadded DESI spectra. 
-This table combines the measurements from different survey/program combinations.
+This table combines the measurements from different survey/program pairs.
 This table has exactly the same length as the RVTAB and is matching row by row 
 the RVTAB.
 
