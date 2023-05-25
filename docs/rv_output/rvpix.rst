@@ -37,7 +37,7 @@ HDU1
 
 EXTNAME = RVTAB
 
-This is table of measurements by RVSpecfit of coadded DESI spectra for 
+This is table of measurements by RVSpecfit of coadded DESI spectra for
 a given survey/program.
 
 Required Header Keywords
@@ -204,7 +204,7 @@ HDU3
 
 EXTNAME = SCORES
 
-The table with various quality information about spectra
+The table with various quality information about spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -456,8 +456,3 @@ LIBNAME_GSPPHOT                 char[20]
 EBV                             float32  mag       Galactic extinction E(B-V) reddening from SFD98
 =============================== ======== ========= ====================================================================
 
-
-Notes and Examples
-==================
-
-*Add notes and examples here.  You can also create links to example files.*

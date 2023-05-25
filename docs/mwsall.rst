@@ -2,8 +2,8 @@
 mwsall
 ======
 
-:Summary: Combined catalog of desi measurements from RVSpecfit and FERRE crossmatched with Gaia
-:File Type: FITS, 1 GB 
+:Summary: Combined catalog of DESI measurements from RVSpecfit and FERRE crossmatched with Gaia
+:File Type: FITS, 1 GB
 
 Contents
 ========
@@ -34,9 +34,9 @@ HDU1
 
 EXTNAME = RVTAB
 
-This is table of measurements by RVSpecfit of coadded DESI spectra. 
+This is table of measurements by RVSpecfit of coadded DESI spectra.
 This table combines the measurements from different survey/program combinations
-and labels their suggested PRIMARY observation. 
+and labels their suggested PRIMARY observation.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -107,10 +107,10 @@ HDU2
 
 EXTNAME = SPTAB
 
-This is table of measurements by FERRE of coadded DESI spectra. 
+This is table of measurements by FERRE of coadded DESI spectra.
 This table combines the measurements from different survey/program pairs.
-This table has exactly the same length as the RVTAB and is matching row by row 
-the RVTAB.
+This table has exactly the same length as the RVTAB and matches row by row
+the RVTAB extension.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ HDU4
 
 EXTNAME = SCORES
 
-The table with various quality information about spectra
+The table with various quality information about spectra.
 
 Required Header Keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -527,7 +527,3 @@ EBV                             float32  mag       Galactic extinction E(B-V) re
 =============================== ======== ========= ====================================================================
 
 
-Notes and Examples
-==================
-
-*Add notes and examples here.  You can also create links to example files.*
